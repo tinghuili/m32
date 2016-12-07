@@ -1,0 +1,152 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Processor
+Version: K-2015.06-SP3
+Date   : Wed Dec  7 16:17:41 2016
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: EXMEM/M_RtRd_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: ALU/HILO_reg[63]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  EXMEM/M_RtRd_reg[0]/CLK (DFFPOSX1)                      0.00 #     0.50 r
+  EXMEM/M_RtRd_reg[0]/Q (DFFPOSX1)                        0.11       0.61 f
+  EXMEM/M_RtRd[0] (EXMEM_Stage)                           0.00       0.61 f
+  HazardControl/MEM_RtRd[0] (Hazard_Detection)            0.00       0.61 f
+  HazardControl/U177/Y (INVX1)                            0.10       0.71 r
+  HazardControl/U140/Y (XOR2X1)                           0.06       0.77 r
+  HazardControl/U150/Y (AND2X1)                           0.03       0.79 r
+  HazardControl/U151/Y (INVX1)                            0.02       0.82 f
+  HazardControl/U133/Y (NOR3X1)                           0.05       0.86 r
+  HazardControl/U148/Y (AND2X1)                           0.05       0.92 r
+  HazardControl/U127/Y (AOI21X1)                          0.03       0.95 f
+  HazardControl/U20/Y (BUFX2)                             0.03       0.99 f
+  HazardControl/U126/Y (NAND3X1)                          0.03       1.01 r
+  HazardControl/U112/Y (BUFX2)                            0.04       1.05 r
+  HazardControl/U119/Y (OAI21X1)                          0.03       1.07 f
+  HazardControl/EX_RsFwdSel[1] (Hazard_Detection)         0.00       1.07 f
+  EXRsFwd_Mux/sel[1] (Mux4_WIDTH32_1)                     0.00       1.07 f
+  EXRsFwd_Mux/U169/Y (OR2X1)                              0.05       1.12 f
+  EXRsFwd_Mux/U167/Y (INVX1)                              0.30       1.42 r
+  EXRsFwd_Mux/U33/Y (AOI22X1)                             0.12       1.54 f
+  EXRsFwd_Mux/U127/Y (BUFX2)                              0.06       1.60 f
+  EXRsFwd_Mux/U125/Y (AND2X2)                             0.04       1.63 f
+  EXRsFwd_Mux/U126/Y (INVX1)                              0.77       2.41 r
+  EXRsFwd_Mux/out[2] (Mux4_WIDTH32_1)                     0.00       2.41 r
+  ALU/A[2] (ALU)                                          0.00       2.41 r
+  ALU/U2485/Y (INVX1)                                     0.26       2.66 f
+  ALU/U2321/Y (INVX1)                                     0.84       3.50 r
+  ALU/mult_88/a[2] (ALU_DW_mult_tc_0)                     0.00       3.50 r
+  ALU/mult_88/U4383/Y (INVX1)                             0.24       3.74 f
+  ALU/mult_88/U4365/Y (INVX1)                             0.65       4.39 r
+  ALU/mult_88/U4500/Y (XNOR2X1)                           0.16       4.55 f
+  ALU/mult_88/U317/YC (HAX1)                              0.08       4.63 f
+  ALU/mult_88/U316/YC (HAX1)                              0.05       4.68 f
+  ALU/mult_88/U315/YC (HAX1)                              0.06       4.74 f
+  ALU/mult_88/U314/YC (FAX1)                              0.08       4.82 f
+  ALU/mult_88/U313/YC (FAX1)                              0.08       4.90 f
+  ALU/mult_88/U312/YC (FAX1)                              0.08       4.98 f
+  ALU/mult_88/U311/YC (FAX1)                              0.08       5.06 f
+  ALU/mult_88/U310/YC (FAX1)                              0.08       5.14 f
+  ALU/mult_88/U309/YC (FAX1)                              0.08       5.23 f
+  ALU/mult_88/U308/YC (FAX1)                              0.08       5.31 f
+  ALU/mult_88/U307/YC (FAX1)                              0.08       5.39 f
+  ALU/mult_88/U306/YC (FAX1)                              0.08       5.47 f
+  ALU/mult_88/U305/YC (FAX1)                              0.08       5.55 f
+  ALU/mult_88/U304/YC (FAX1)                              0.08       5.63 f
+  ALU/mult_88/U303/YC (FAX1)                              0.08       5.71 f
+  ALU/mult_88/U302/YC (FAX1)                              0.08       5.80 f
+  ALU/mult_88/U301/YC (FAX1)                              0.08       5.88 f
+  ALU/mult_88/U300/YC (FAX1)                              0.08       5.96 f
+  ALU/mult_88/U299/YC (FAX1)                              0.08       6.04 f
+  ALU/mult_88/U298/YC (FAX1)                              0.08       6.12 f
+  ALU/mult_88/U297/YC (FAX1)                              0.08       6.20 f
+  ALU/mult_88/U296/YC (FAX1)                              0.08       6.28 f
+  ALU/mult_88/U295/YC (FAX1)                              0.08       6.37 f
+  ALU/mult_88/U294/YC (FAX1)                              0.08       6.45 f
+  ALU/mult_88/U293/YC (FAX1)                              0.08       6.53 f
+  ALU/mult_88/U292/YC (FAX1)                              0.08       6.61 f
+  ALU/mult_88/U291/YC (FAX1)                              0.08       6.69 f
+  ALU/mult_88/U290/YC (FAX1)                              0.08       6.77 f
+  ALU/mult_88/U289/YC (FAX1)                              0.08       6.85 f
+  ALU/mult_88/U288/YC (FAX1)                              0.08       6.94 f
+  ALU/mult_88/U287/YC (FAX1)                              0.08       7.02 f
+  ALU/mult_88/U286/YC (FAX1)                              0.08       7.10 f
+  ALU/mult_88/U285/YC (FAX1)                              0.08       7.18 f
+  ALU/mult_88/U284/YC (FAX1)                              0.08       7.26 f
+  ALU/mult_88/U283/YC (FAX1)                              0.08       7.34 f
+  ALU/mult_88/U282/YC (FAX1)                              0.08       7.42 f
+  ALU/mult_88/U281/YC (FAX1)                              0.08       7.51 f
+  ALU/mult_88/U280/YC (FAX1)                              0.08       7.59 f
+  ALU/mult_88/U279/YC (FAX1)                              0.08       7.67 f
+  ALU/mult_88/U278/YC (FAX1)                              0.08       7.75 f
+  ALU/mult_88/U277/YC (FAX1)                              0.08       7.83 f
+  ALU/mult_88/U276/YC (FAX1)                              0.08       7.91 f
+  ALU/mult_88/U275/YC (FAX1)                              0.08       8.00 f
+  ALU/mult_88/U274/YC (FAX1)                              0.08       8.08 f
+  ALU/mult_88/U273/YC (FAX1)                              0.08       8.16 f
+  ALU/mult_88/U272/YC (FAX1)                              0.08       8.24 f
+  ALU/mult_88/U271/YC (FAX1)                              0.08       8.32 f
+  ALU/mult_88/U270/YC (FAX1)                              0.08       8.40 f
+  ALU/mult_88/U269/YC (FAX1)                              0.08       8.48 f
+  ALU/mult_88/U268/YC (FAX1)                              0.08       8.57 f
+  ALU/mult_88/U267/YC (FAX1)                              0.08       8.65 f
+  ALU/mult_88/U266/YC (FAX1)                              0.08       8.73 f
+  ALU/mult_88/U265/YC (FAX1)                              0.08       8.81 f
+  ALU/mult_88/U264/YC (FAX1)                              0.08       8.89 f
+  ALU/mult_88/U263/YC (FAX1)                              0.08       8.97 f
+  ALU/mult_88/U262/YC (FAX1)                              0.08       9.05 f
+  ALU/mult_88/U261/YC (FAX1)                              0.08       9.14 f
+  ALU/mult_88/U260/YC (FAX1)                              0.08       9.22 f
+  ALU/mult_88/U259/YC (FAX1)                              0.08       9.30 f
+  ALU/mult_88/U258/YC (FAX1)                              0.08       9.38 f
+  ALU/mult_88/U257/YC (FAX1)                              0.08       9.46 f
+  ALU/mult_88/U256/YC (FAX1)                              0.08       9.54 f
+  ALU/mult_88/U255/YC (FAX1)                              0.08       9.62 f
+  ALU/mult_88/U4483/Y (XNOR2X1)                           0.07       9.69 r
+  ALU/mult_88/U4482/YS (FAX1)                             0.11       9.80 r
+  ALU/mult_88/product[63] (ALU_DW_mult_tc_0)              0.00       9.80 r
+  ALU/add_137/B[63] (ALU_DW01_add_1)                      0.00       9.80 r
+  ALU/add_137/U1_63/YS (FAX1)                             0.09       9.89 f
+  ALU/add_137/SUM[63] (ALU_DW01_add_1)                    0.00       9.89 f
+  ALU/U335/Y (AOI22X1)                                    0.03       9.93 r
+  ALU/U5/Y (AND2X2)                                       0.04       9.96 r
+  ALU/U1651/Y (INVX1)                                     0.02       9.98 f
+  ALU/U296/Y (OR2X1)                                      0.04      10.02 f
+  ALU/U295/Y (OR2X1)                                      0.05      10.07 f
+  ALU/U333/Y (AOI22X1)                                    0.03      10.10 r
+  ALU/U724/Y (AND2X2)                                     0.03      10.13 r
+  ALU/U725/Y (INVX1)                                      0.01      10.14 f
+  ALU/HILO_reg[63]/D (DFFPOSX1)                           0.00      10.14 f
+  data arrival time                                                 10.14
+
+  clock clock (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  ALU/HILO_reg[63]/CLK (DFFPOSX1)                         0.00      10.40 r
+  library setup time                                     -0.06      10.34
+  data required time                                                10.34
+  --------------------------------------------------------------------------
+  data required time                                                10.34
+  data arrival time                                                -10.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+1
